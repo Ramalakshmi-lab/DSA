@@ -1,0 +1,13 @@
+class Solution:
+    def validPalindrome(self, s: str) -> bool:
+        a=0
+        b=len(s)-1
+        while(a<b):
+            if s[a]!=s[b]:
+                l,r=s[a+1:b+1],s[a:b]
+                return (l==l[::-1] or r==r[::-1])
+            a+=1
+            b-=1
+        return True
+    here we need to delete a single character and check for the palindrome 
+      we use two pointer ans slicing where we slice either a left char or right char when l,r donot match.
