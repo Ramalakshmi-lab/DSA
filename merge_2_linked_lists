@@ -1,0 +1,18 @@
+to buy and sell
+[7,8,3,4,5]
+if we buy at 7 we can sell it at the 8 profit by getting the 1 rupee profit'
+consider a 'a' be some variable with infinity value
+consider a 'b' be some variable of max cal
+update a with small value and b with the max(b,i-a)
+
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        a=10**4
+        b=0
+        for i in prices:
+            if a>i:
+                a=i
+            else:
+                b=max(b,i-a)
+        return b
